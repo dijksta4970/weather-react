@@ -11,7 +11,7 @@ function App() {
       <Input />
       <p class="bio">
       This project was coded by Daisy Guan and is open-sourced on <a class="github-button"
-        href="https://github.com/hokkjkm/weather-search" data-icon="octicon-eye"
+        href="https://github.com/hokkjkm/weather-react" data-icon="octicon-eye"
         aria-label="Watch ntkme/github-buttons on GitHub">Github</a>
       </p>
     </div>
