@@ -3,12 +3,12 @@ import React, { useState } from "react";
 export default function Unichage(props){
     const [unit,setUnit] = useState("celsius");
     
-    function convertoF(event){
+    function converttoF(event){
         event.preventDefault();
         setUnit("fahrenheit");
     }
 
-    function convertoC(event){
+    function converttoC(event){
         event.preventDefault();
         setUnit("celsius");
     }
@@ -22,17 +22,16 @@ export default function Unichage(props){
     if(unit === "celsius") {
         return(
             <div className="temprature">
-                {Math.round(props.celsius)}
-                <span>C° | <a href="/" onClick={converttoC}>
+                {Math.round(props.celsius)} {" "}
+                <span>C° | {" "}<a href="/" onClick={converttoF}>
                     F° </a>  </span>
             </div>
         );
     } else {
-        let fahrenheit = (props.celsius * 9)/5 + 32;
         return(
             <div className="temprature">
-                {Math.round(calculate())}
-                <span><a href="/" onClick={converttoC}>C°</a> | 
+                {Math.round(calculate())} {" "}
+                <span><a href="/" onClick={converttoC}>C°</a> |{" "} 
                     F°   </span>
             </div>
         );
