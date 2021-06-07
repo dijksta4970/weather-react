@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Unitchange from "./unitchange";
 
 export default function Input() {
   let [city, setCity] = useState("");
@@ -12,7 +13,7 @@ export default function Input() {
   function showTemperature(response) {
     setMessage(
       <ul>
-        <li>Temperature: {Math.round(response.data.main.temp)}°C</li>
+        <li>Temperature: <Unitchange /></li>
         <li>Description: {response.data.weather[0].description}</li>
         <li>Humidity: {response.data.main.humidity}%</li>
         <li>Wind: {response.data.wind.speed}m/s</li>
